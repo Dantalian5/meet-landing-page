@@ -1,6 +1,14 @@
 //Fonts:
+$ff-red-hat: 'Red Hat Display', sans-serif;
 // Colors:
     // Primary
+    $c-4D96A9: hsla(192, 37%, 48%, 1);
+    $c-855FB1: hsla(268, 34%, 53%, 1);
+    $c-28283D: hsla(240, 21%, 20%, 1);
+    $c-87879D: hsla(240, 10%, 57%, 1);
+    $c-8FE3F9: hsla(192, 90%, 77%, 1);
+    $c-D9B8FF: hsla(268, 100%, 86%, 1);
+    $c-FAFAFA: hsla(0, 0%, 98%, 1);
     // Neutral
     $c-n-white: hsl(0,0%,100%);
     $c-n-black: hsl(0,0%,0%);
@@ -8,7 +16,11 @@
     $screen-min: 23.4375rem;
     $screen-max: 90rem;
 
-
+body{
+    min-height: 100vh;
+    min-height: 100svh;
+    background: $c-FAFAFA;
+}
 
 
 
