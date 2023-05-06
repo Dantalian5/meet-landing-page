@@ -1,0 +1,235 @@
+.base-container {
+  min-width: 18.75rem;
+  max-width: 90rem;
+  margin-inline: auto;
+  overflow-x: hidden;
+  --container-padding: 6%;
+  --container-margin: 4rem;
+  padding-inline: clamp(1.5rem, var(--container-padding), 10.3125rem);
+  & + .base-container {
+    margin-top: var(--container-margin);
+  }
+}
+.flex {
+  display: flex;
+}
+.header {
+  padding-top: 3rem;
+  &__logo {
+    width: fit-content;
+    margin-inline: auto;
+    margin-bottom: 3.375rem;
+  }
+  &__hero {
+    &--wrapper {
+      flex-flow: row wrap;
+      align-items: center;
+      gap: 3rem 1rem;
+    }
+    &__image-wrapper {
+      flex: 1 1 0;
+      &--1 {
+        order: 1;
+      }
+      &--2 {
+        order: 2;
+      }
+    }
+    &__image {
+      --variable-width: calc(-1.5rem + -1.25rem);
+      width: calc(100% - var(--variable-width));
+      position: relative;
+      &--left {
+        transform: translate(var(--variable-width), 0);
+      }
+    }
+    &__text-wrapper {
+      width: 100%;
+      //max-width: 28.75rem;
+      margin-inline: auto;
+      order: 3;
+    }
+    &__title {
+      margin-bottom: 1.5rem;
+    }
+    &__subtitle {
+      margin-bottom: 2rem;
+      margin-inline: auto;
+    }
+    &__cta-wrapper {
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding-inline: 1rem;
+    }
+  }
+}
+.section-1 {
+  &__image-gallery {
+    margin-bottom: 4rem;
+  }
+  &__info {
+    max-width: 35.9375rem;
+    margin-inline: auto;
+    &__accent {
+      margin-bottom: 1.5rem;
+    }
+    &__title {
+      max-width: 27.8125rem;
+      margin-inline: auto;
+      margin-bottom: 2rem;
+    }
+  }
+}
+.section-2 {
+  position: relative;
+  background: linear-gradient($c-4D96A9, $c-4D96A9) no-repeat;
+  background-position: top 7rem center;
+  isolation: isolate;
+  --bg-image-image: url(../assets/mobile/image-footer.jpg);
+  --bg-image-opacity: 0.1;
+  &::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 7rem 0 0;
+    background: var(--bg-image-image) no-repeat;
+    background-size: cover;
+    opacity: var(--bg-image-opacity);
+  }
+  &__wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 35.9375rem;
+    margin-inline: auto;
+  }
+  &__title {
+    width: fit-content;
+    margin-bottom: 1.5rem;
+  }
+  &__text {
+    margin-bottom: 2rem;
+  }
+  &__button {
+    min-width: fit-content;
+    margin-bottom: 4.5rem;
+  }
+}
+//------------ tablet layout ---------------------------------------
+@media (min-width: 43.75rem) {
+  .base-container {
+    --container-padding: 5.05%;
+    --container-margin: 5rem;
+  }
+  .header {
+    &__logo {
+      margin-bottom: 4rem;
+    }
+    &__hero {
+      &--wrapper {
+        gap: 4.5rem 2rem;
+      }
+      &__image {
+        --variable-width: calc(-2.5rem + -1.625rem);
+      }
+      &__subtitle {
+        max-width: 28.75rem;
+      }
+    }
+  }
+  .section-1 {
+    &__image-gallery {
+      margin-bottom: 3rem;
+    }
+    &__info {
+      &__accent {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  .section-2 {
+    --bg-image-image: url(../assets/tablet/image-footer.jpg);
+    --bg-image-opacity: 0.1;
+    &__title {
+      margin-bottom: 2rem;
+    }
+    &__text {
+      margin-bottom: 2.5rem;
+    }
+    &__button {
+      margin-bottom: 4.125rem;
+    }
+  }
+}
+//---------- desktop layout --------------------------
+@media (min-width: 62.5rem) {
+  .base-container {
+    --container-padding: 11.5%;
+    --container-margin: 4.5rem;
+  }
+  .header {
+    &__logo {
+      margin-bottom: 3.8125rem;
+    }
+    &__hero {
+      &--wrapper {
+        gap: 0 5.5rem;
+      }
+      &__image-wrapper {
+        &--1 {
+          align-self: flex-start;
+        }
+        &--2 {
+          align-self: flex-end;
+        }
+      }
+      &__image {
+        --variable-width: calc(-10.3125rem + -2rem);
+      }
+      &__text-wrapper {
+        max-width: 33.75rem;
+        order: 1;
+        padding-block: 2.9375rem .625rem;
+      }
+      &__title {
+        margin-bottom: 2.125rem;
+      }
+      &__subtitle {
+        max-width: none;
+      }
+    }
+  }
+  .section-1 {
+    &__image-gallery {
+      margin-bottom: 5rem;
+    }
+    &__info {
+      &__text {
+        max-width: 33.75rem;
+        margin-inline: auto;
+      }
+    }
+  }
+  .section-2 {
+    --bg-image-image: url(../assets/desktop/image-footer.jpg);
+    --bg-image-opacity: 0.1;
+    &__wrapper {
+      flex-direction: row;      
+      max-width: none;
+      margin-bottom: 6.25rem;
+      gap: 2rem;
+    }
+    &__title {
+      margin-bottom: 0;
+    }
+    &__text {
+      max-width: 21.875rem;
+      margin-bottom: 0;
+    }
+    &__button {
+      margin-bottom: 0;
+    }
+  }
+}
