@@ -449,4 +449,12 @@ body {
   .section-2__text--module {
     text-align: start;
   }
+}
+@media (hover: hover) {
+  .button--c1:hover {
+    background: hsl(192, 54%, 64%);
+  }
+  .button--c2:hover {
+    background: hsl(268, 55%, 71%);
+  }
 }/*# sourceMappingURL=style.css.map */
