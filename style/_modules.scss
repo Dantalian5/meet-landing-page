@@ -102,3 +102,44 @@
     line-height: 144%;
   }
 }
+@media  (min-width:43.75rem) {
+  .section-title {
+    font-size: 2.5rem;
+    line-height: 110%;
+    &--h1 {
+      font-size: 3rem;
+      line-height: 100%;
+    }
+  }
+  .image-gallery {
+    gap: .6875rem;
+    &__group {
+      gap: .6875rem;
+    }
+  }
+}
+@media  (min-width:62.5rem) {
+  .section-title {
+    &--h1 {
+      font-size: 4rem;
+    }
+  }
+  .section-text {
+    line-height: 144%;
+    font-size: 1.125rem;
+  }
+  .image-gallery {
+    gap: 1.875rem;
+    &__group {
+      gap: 1.875rem;
+    }
+  }
+  .section-2 {
+    &__title--module {
+      text-align: start;
+    }
+    &__text--module{
+      text-align: start;
+    }
+  }
+}
