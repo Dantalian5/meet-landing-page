@@ -88,7 +88,7 @@ body {
   overflow-x: hidden;
   --container-padding: 6%;
   --container-margin: 4rem;
-  padding-inline: clamp( 1.5rem, var(--container-padding), 10.3125rem );
+  padding-inline: clamp(1.5rem, var(--container-padding), 10.3125rem);
 }
 .base-container + .base-container {
   margin-top: var(--container-margin);
